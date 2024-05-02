@@ -29,8 +29,10 @@ github_username:  anupriyamranjit
 
 # Build settings
 theme: minima
+gems: [jekyll-mermaid]
 plugins:
   - jekyll-feed
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
