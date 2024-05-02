@@ -4,8 +4,8 @@ title:  "How does React work"
 date:   2024-05-01 20:12:33 -0400
 categories: React
 tag: [SWE, Frontend]
+summary: "The article provides a succinct introduction to React's function in rendering HTML for web apps. It mentions prominent companies that use React and simplifies the process of web content delivery. The main focus is on explaining how React renders HTML, showcasing the conversion of HTML into a tree structure of nodes using an example snippet and an accompanying image. Overall, it aims to give readers a basic grasp of React's role in rendering web content."
 ---
-
 This article is a quick overview of React and how it renders HTML that you see every day
 
 ## Who uses React
@@ -25,7 +25,7 @@ Now is the real content
 This HTML that is sent to you is then converted into a tree structure made up of Nodes let's show an example
 
 
-```html
+{% highlight html %}
   <div>
     <h1>Welcome to My Website</h1>
     <p>Hello, this is a random paragraph.</p>
@@ -39,12 +39,11 @@ This HTML that is sent to you is then converted into a tree structure made up of
         <p>More random text here.</p>
     </div>
   </div>
-  ```
+{% endhighlight %}
 
 
   Made into 
 ![Alt text for broken image link](/assets/html_dom.png)
-
 
 
 

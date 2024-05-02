@@ -1,5 +1,5 @@
 ---
-title: Blog Page
+title: Back
 ---
 
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ title: Blog Page
               </h2>
               <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-gray-500">{{ post.date | date_to_long_string }}</time>
               <p class="text-gray-500">
-                {{ post.content | slice: 0,500 }}
+                {{ post.summary | slice: 0,500 }}
               </p>
               <p class="text-xs text-gray-400">
                 {{ post.tags | join: ', ' }}
