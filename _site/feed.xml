@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-02T00:17:50-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog</title><subtitle>Contact me for any queries or collaborations!</subtitle><entry><title type="html">How does React work</title><link href="http://localhost:4000/react/2024/05/01/how-does-react-work.html" rel="alternate" type="text/html" title="How does React work" /><published>2024-05-01T20:12:33-04:00</published><updated>2024-05-01T20:12:33-04:00</updated><id>http://localhost:4000/react/2024/05/01/how-does-react-work</id><content type="html" xml:base="http://localhost:4000/react/2024/05/01/how-does-react-work.html"><![CDATA[<p>This article is a quick overview of React and how it renders HTML that you see every day</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-02T20:07:04-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog</title><subtitle>Contact me for any queries or collaborations!</subtitle><entry><title type="html">Djkstra Algorithim</title><link href="http://localhost:4000/2024/05/02/djkstra-algorithim.html" rel="alternate" type="text/html" title="Djkstra Algorithim" /><published>2024-05-02T00:00:00-04:00</published><updated>2024-05-02T00:00:00-04:00</updated><id>http://localhost:4000/2024/05/02/djkstra-algorithim</id><content type="html" xml:base="http://localhost:4000/2024/05/02/djkstra-algorithim.html"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">How does React work</title><link href="http://localhost:4000/react/2024/05/01/how-does-react-work.html" rel="alternate" type="text/html" title="How does React work" /><published>2024-05-01T20:12:33-04:00</published><updated>2024-05-01T20:12:33-04:00</updated><id>http://localhost:4000/react/2024/05/01/how-does-react-work</id><content type="html" xml:base="http://localhost:4000/react/2024/05/01/how-does-react-work.html"><![CDATA[<p>This article is a quick overview of React and how it renders HTML that you see every day</p>
 
 <h2 id="who-uses-react">Who uses React</h2>
 <p>React is used by multiple large companies</p>
@@ -14,9 +14,11 @@
 
 <p>Now is the real content</p>
 
-<h4 id="html-rendering">HTML Rendering</h4>
+<h3 id="html-rendering">HTML Rendering</h3>
 
 <p>This HTML that is sent to you is then converted into a tree structure made up of Nodes let’s show an example</p>
+
+<h4 id="dom">DOM</h4>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Welcome to My Website<span class="nt">&lt;/h1&gt;</span>
@@ -33,4 +35,88 @@
   <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Made into 
-<img src="/assets/html_dom.png" alt="Alt text for broken image link" /></p>]]></content><author><name></name></author><category term="React" /><category term="SWE" /><category term="Frontend" /><summary type="html"><![CDATA[This article is a quick overview of React and how it renders HTML that you see every day]]></summary></entry></feed>
+<img src="/assets/html_dom.png" alt="Alt text for broken image link" /></p>
+
+<h4 id="cssom">CSSOM</h4>
+<p>A similar procress is also done to the CSS which creates CSSOM that looks like the following</p>
+
+<p><img src="/assets/cssom.png" alt="Alt text for broken image link" /></p>
+
+<h4 id="render-tree">Render Tree</h4>
+<p>These 2 get combined into somethign called a render tree which only renders the <strong>visible node</strong> (so nodes with display:none are ignored)</p>
+
+<p><img src="/assets/rendertree.png" alt="Alt text for broken image link" /></p>
+
+<h4 id="layout">Layout</h4>
+<p>This render tree is then passed into the layout stage where the size of each element is calcualted</p>
+
+<h4 id="painting">Painting</h4>
+<p>Finally, after the layout stage we render each element in the correct position</p>
+
+<h3 id="how-are-html-pages-updates-made">How are HTML pages updates made?</h3>
+
+<p>This may not seem relevant but is important to undertand on why React was created</p>
+
+<p>When changes are made to the HTML the entire DOM is recreated which then recreates the render tree. So this means this is a complete rewrite. This as you can tell can be pretty slow as the render tree needs to remade.</p>
+
+<h3 id="how-is-react-different">How is React Different?</h3>]]></content><author><name></name></author><category term="React" /><category term="SWE" /><category term="Frontend" /><summary type="html"><![CDATA[The article provides a succinct introduction to React's function in rendering HTML for web apps. It mentions prominent companies that use React and simplifies the process of web content delivery. The main focus is on explaining how React renders HTML, showcasing the conversion of HTML into a tree structure of nodes using an example snippet and an accompanying image. Overall, it aims to give readers a basic grasp of React's role in rendering web content.]]></summary></entry><entry><title type="html">Leetcode - Mastering DFS</title><link href="http://localhost:4000/interview/2024/05/01/leetcode-DFS-masterclass.html" rel="alternate" type="text/html" title="Leetcode - Mastering DFS" /><published>2024-05-01T20:12:33-04:00</published><updated>2024-05-01T20:12:33-04:00</updated><id>http://localhost:4000/interview/2024/05/01/leetcode-DFS-masterclass</id><content type="html" xml:base="http://localhost:4000/interview/2024/05/01/leetcode-DFS-masterclass.html"><![CDATA[<p>Hi! I’m currently grinding a new grad role and I am going over all the key concepts needed for interviews.</p>
+
+<p>The first one I wanted to talk about is DFS</p>
+
+<p>Here are the question I did to learn more about it:</p>
+
+<p>I am also trying to improve how fast I can write the DFS code as one of my previous interviews I ran out of time thinking about it</p>
+
+<ol>
+  <li><a href="https://leetcode.com/problems/number-of-islands/" target="_blank">Number of Islands</a></li>
+  <li><a href="https://leetcode.com/problems/max-area-of-island" target="_blank">Max Area of Islands</a> (Time Taken to Write Code: 6:10)</li>
+  <li><a href="https://leetcode.com/problems/pacific-atlantic-water-flow" target="_blank">Pacific Athlantic Flow</a></li>
+  <li><a href="https://leetcode.com/problems/surrounded-regions" target="_blank">Surrounded Regions</a> (Time Taken to Write Code: 9:36)</li>
+</ol>
+
+<h1 id="general-idea-and-code-structure">General Idea and Code Structure</h1>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">wrapperclass</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">):</span>
+  <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span> <span class="nf">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+  <span class="n">visit</span> <span class="o">=</span> <span class="nf">set</span><span class="p">()</span>
+
+  <span class="k">def</span> <span class="nf">DFS</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+    <span class="nf">if</span><span class="p">((</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">)</span> <span class="ow">in</span> <span class="n">visit</span><span class="p">):</span>
+      <span class="k">return</span> <span class="n">___</span>
+
+    <span class="nf">if</span><span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">row</span> <span class="o">&gt;=</span> <span class="n">rows</span><span class="p">):</span>
+      <span class="k">return</span> <span class="n">___</span>
+
+    <span class="nf">if</span><span class="p">(</span><span class="n">col</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">col</span> <span class="o">&gt;=</span> <span class="n">cols</span><span class="p">):</span>
+      <span class="k">return</span> <span class="n">___</span>
+    
+    <span class="o">//</span> <span class="n">Other</span> <span class="n">conditions</span> 
+
+
+    <span class="o">//</span> <span class="n">Add</span> <span class="n">to</span> <span class="n">visited</span>
+
+    <span class="n">visit</span><span class="p">.</span><span class="nf">add</span><span class="p">((</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span>
+
+    <span class="o">//</span> <span class="n">Iterate</span> <span class="n">Neighbors</span>
+
+
+
+    <span class="n">directions</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">dr</span><span class="p">,</span><span class="n">dc</span> <span class="ow">in</span> <span class="n">directions</span><span class="p">:</span>
+      <span class="o">//</span> <span class="n">Deal</span> <span class="k">with</span> <span class="n">neighbors</span> <span class="n">using</span>
+      <span class="nc">DFS</span><span class="p">(</span><span class="n">row</span> <span class="o">+</span> <span class="n">dr</span><span class="p">,</span> <span class="n">col</span> <span class="o">+</span> <span class="n">dc</span><span class="p">)</span>
+
+    <span class="o">//</span> <span class="n">Deal</span> <span class="n">use</span> <span class="n">recursive</span> <span class="n">DFS</span> <span class="n">to</span> <span class="n">make</span> <span class="n">DFS_RESULT</span>
+    <span class="k">return</span> <span class="n">DFS_RESULT</span>
+  
+  <span class="o">//</span> <span class="n">Iterate</span> <span class="n">through</span> <span class="n">graph</span>
+  <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+      <span class="o">//</span> <span class="n">Find</span> <span class="n">valid</span> <span class="n">node</span> <span class="ow">and</span> <span class="n">run</span> 
+        <span class="nc">DFS</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+  
+
+  <span class="k">return</span> <span class="n">final_result</span>
+  </code></pre></figure>]]></content><author><name></name></author><category term="Interview" /><category term="SWE" /><category term="Interview" /><summary type="html"><![CDATA[The blog post discusses mastering Depth-First Search (DFS) for coding interviews, aiming to improve speed in writing DFS code. It outlines several questions tackled to understand DFS better]]></summary></entry></feed>

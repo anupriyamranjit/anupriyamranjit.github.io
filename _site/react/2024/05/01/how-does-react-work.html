@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="How does React work" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This article is a quick overview of React and how it renders HTML that you see every day" />
-<meta property="og:description" content="This article is a quick overview of React and how it renders HTML that you see every day" />
+<meta name="description" content="The article provides a succinct introduction to React’s function in rendering HTML for web apps. It mentions prominent companies that use React and simplifies the process of web content delivery. The main focus is on explaining how React renders HTML, showcasing the conversion of HTML into a tree structure of nodes using an example snippet and an accompanying image. Overall, it aims to give readers a basic grasp of React’s role in rendering web content." />
+<meta property="og:description" content="The article provides a succinct introduction to React’s function in rendering HTML for web apps. It mentions prominent companies that use React and simplifies the process of web content delivery. The main focus is on explaining how React renders HTML, showcasing the conversion of HTML into a tree structure of nodes using an example snippet and an accompanying image. Overall, it aims to give readers a basic grasp of React’s role in rendering web content." />
 <link rel="canonical" href="http://localhost:4000/react/2024/05/01/how-does-react-work.html" />
 <meta property="og:url" content="http://localhost:4000/react/2024/05/01/how-does-react-work.html" />
 <meta property="og:site_name" content="Blog" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How does React work" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-01T20:12:33-04:00","datePublished":"2024-05-01T20:12:33-04:00","description":"This article is a quick overview of React and how it renders HTML that you see every day","headline":"How does React work","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/react/2024/05/01/how-does-react-work.html"},"url":"http://localhost:4000/react/2024/05/01/how-does-react-work.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-01T20:12:33-04:00","datePublished":"2024-05-01T20:12:33-04:00","description":"The article provides a succinct introduction to React’s function in rendering HTML for web apps. It mentions prominent companies that use React and simplifies the process of web content delivery. The main focus is on explaining how React renders HTML, showcasing the conversion of HTML into a tree structure of nodes using an example snippet and an accompanying image. Overall, it aims to give readers a basic grasp of React’s role in rendering web content.","headline":"How does React work","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/react/2024/05/01/how-does-react-work.html"},"url":"http://localhost:4000/react/2024/05/01/how-does-react-work.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Blog" /></head>
 <body><header class="site-header" role="banner">
@@ -32,7 +32,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/blog.html">Back</a></div>
+        <div class="trigger"><a class="page-link" href="/blog.html">Back</a><a class="page-link" href="/resume.html">Back</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -63,9 +63,11 @@
 
 <p>Now is the real content</p>
 
-<h4 id="html-rendering">HTML Rendering</h4>
+<h3 id="html-rendering">HTML Rendering</h3>
 
 <p>This HTML that is sent to you is then converted into a tree structure made up of Nodes let’s show an example</p>
+
+<h4 id="dom">DOM</h4>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Welcome to My Website<span class="nt">&lt;/h1&gt;</span>
@@ -83,6 +85,30 @@
 
 <p>Made into 
 <img src="/assets/html_dom.png" alt="Alt text for broken image link" /></p>
+
+<h4 id="cssom">CSSOM</h4>
+<p>A similar procress is also done to the CSS which creates CSSOM that looks like the following</p>
+
+<p><img src="/assets/cssom.png" alt="Alt text for broken image link" /></p>
+
+<h4 id="render-tree">Render Tree</h4>
+<p>These 2 get combined into somethign called a render tree which only renders the <strong>visible node</strong> (so nodes with display:none are ignored)</p>
+
+<p><img src="/assets/rendertree.png" alt="Alt text for broken image link" /></p>
+
+<h4 id="layout">Layout</h4>
+<p>This render tree is then passed into the layout stage where the size of each element is calcualted</p>
+
+<h4 id="painting">Painting</h4>
+<p>Finally, after the layout stage we render each element in the correct position</p>
+
+<h3 id="how-are-html-pages-updates-made">How are HTML pages updates made?</h3>
+
+<p>This may not seem relevant but is important to undertand on why React was created</p>
+
+<p>When changes are made to the HTML the entire DOM is recreated which then recreates the render tree. So this means this is a complete rewrite. This as you can tell can be pretty slow as the render tree needs to remade.</p>
+
+<h3 id="how-is-react-different">How is React Different?</h3>
 
 
   </div><a class="u-url" href="/react/2024/05/01/how-does-react-work.html" hidden></a>
