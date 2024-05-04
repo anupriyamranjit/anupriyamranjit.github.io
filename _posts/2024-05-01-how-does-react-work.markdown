@@ -77,6 +77,8 @@ When changes are made to the HTML the entire DOM is recreated which then recreat
 
 ### How is React Different?
 
+To make this more efficent react uses something called a Virtual DOM, 
+
 
 
 
